@@ -23,8 +23,8 @@ cluster-version            = "1.33"
 cluster-name               = "eks-cluster"
 endpoint-private-access    = true
 endpoint-public-access     = false
-ondemand_instance_types    = ["t3.micro"]
-spot_instance_types        = ["t3.micro", "c5a.large", "c5a.xlarge", "m5a.large", "m5a.xlarge", "c5.large", "m5.large", "t3a.large", "t3a.xlarge", "t3a.medium"]
+ondemand_instance_types    = ["t3.medium"]
+spot_instance_types        = ["t3.medium", "c5a.large", "c5a.xlarge", "m5a.large", "m5a.xlarge", "c5.large", "m5.large", "t3a.large", "t3a.xlarge", "t3a.medium"]
 desired_capacity_on_demand = "1"
 min_capacity_on_demand     = "1"
 max_capacity_on_demand     = "5"
@@ -34,15 +34,15 @@ max_capacity_spot          = "10"
 addons = [
   {
     name    = "vpc-cni",
-    version = "v1.20.0-eksbuild.1"
+    version = "v1.21.1-eksbuild.3"
   },
   {
     name    = "coredns"
-    version = "v1.12.2-eksbuild.4"
+    version = "v1.13.1-eksbuild.1"
   },
   {
     name    = "kube-proxy"
-    version = "v1.33.0-eksbuild.2"
+    version = "v1.33.7-eksbuild.2"
   },
   {
     name    = "aws-ebs-csi-driver"
